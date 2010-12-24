@@ -1,0 +1,4 @@
+li3_dompdf is a little library to help you integrate DOMPDF within your Lithium
+project using a proper way to configure it.
+
+Use it at your own risks.
