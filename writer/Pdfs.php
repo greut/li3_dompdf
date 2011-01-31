@@ -19,7 +19,9 @@ class Pdfs extends \lithium\core\Adaptable {
 		'orientation' => 'portrait',
 		'dpi' => 96,
 		'font' => 'serif',
+		'font-height-ratio' => 1.1,
 		'php' => false,
+		'css-float' => true,
 		'javascript' => true,
 		'remote' => false,
 		'warnings' => false,
@@ -52,10 +54,12 @@ class Pdfs extends \lithium\core\Adaptable {
 			define('DOMPDF_DEFAULT_MEDIA_TYPE', $config['media'], true);
 			define('DOMPDF_DEFAULT_PAPER_SIZE', $config['paper'], true);
 			define('DOMPDF_DEFAULT_FONT', $config['font'], true);
+			define('DOMPDF_FONT_HEIGHT_RATIO', $config['font-height-ratio'], true);
 			define('DOMPDF_DPI', $config['dpi'], true);
 			define('DOMPDF_ENABLE_PHP', $config['php'], true);
-			define('DOMPDF_ENABLE_JAVASCRIPT', $config['javascript'], true);
 			define('DOMPDF_ENABLE_REMOTE', $config['remote'], true);
+			define('DOMPDF_ENABLE_CSS_FLOAT', $config['css-float'], true);
+			define('DOMPDF_ENABLE_JAVASCRIPT', $config['javascript'], true);
 
 			spl_autoload_register(__NAMESPACE__.'\Pdfs::auto_load');
 
@@ -76,6 +80,7 @@ class Pdfs extends \lithium\core\Adaptable {
 			define('DEBUG_LAYOUT_BLOCKS', $config['debug'], true);
 			define('DEBUG_LAYOUT_INLINE', $config['debug'], true);
 			define('DEBUG_LAYOUT_PADDINGBOX', $config['debug'], true);
+			define('DOMPDF_LOG_OUTPUT_FILE', DOMPDF_FONT_DIR.'log.htm');
 			
 			$dompdf = new \DOMPDF();
 			
@@ -85,5 +90,5 @@ class Pdfs extends \lithium\core\Adaptable {
 		return static::$_dompdf;
 	}
 }
-# vim: noet ts=4 nobinary
+
 ?>

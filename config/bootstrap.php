@@ -23,5 +23,4 @@ if (empty($library)) {
 	));
 }
 
-# vim: noet ts=4
 ?>
