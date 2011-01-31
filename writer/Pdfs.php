@@ -72,7 +72,7 @@ class Pdfs extends \lithium\core\Adaptable {
 			global $_DOMPDF_DEBUG_TYPES;
 			$_DOMPDF_DEBUG_TYPES = array();
 
-			define('DEBUGPPNG', $config['debug'], true);
+			define('DEBUGPNG', $config['debug'], true);
 			define('DEBUGKEEPTEMP', $config['debug'], true);
 			define('DEBUGCSS', $config['debug'], true);
 			define('DEBUG_LAYOUT', $config['debug'], true);
