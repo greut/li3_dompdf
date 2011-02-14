@@ -83,6 +83,7 @@ class Pdfs extends \lithium\core\Adaptable {
 			define('DOMPDF_LOG_OUTPUT_FILE', DOMPDF_FONT_DIR.'log.htm');
 			
 			$dompdf = new \DOMPDF();
+			$dompdf->set_paper($config['paper'], $config['orientation']);
 			
 			static::$_dompdf = $dompdf;
 		}
