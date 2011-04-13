@@ -23,4 +23,6 @@ if (empty($library)) {
 	));
 }
 
+include __DIR__ . '/bootstrap/media.php';
+
 ?>
