@@ -1,6 +1,6 @@
 <?php
 
-namespace li3_dompdf;
+namespace li3_dompdf\writers;
 
 class Pdf extends \lithium\core\Object
 {
@@ -63,5 +63,4 @@ class Pdf extends \lithium\core\Object
 			'outputFilters' => $message::aliases()
 		));
 	}
-
 }

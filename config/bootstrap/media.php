@@ -1,7 +1,7 @@
 <?php
 
 use lithium\net\http\Media;
-use li3_dompdf\writer\Pdfs;
+use li3_dompdf\writers\Pdfs;
 
 Media::type('pdf', 'application/pdf', array('encode' => function($data) {
 	$dompdf = Pdfs::get('default');

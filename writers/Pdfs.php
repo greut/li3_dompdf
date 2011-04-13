@@ -1,6 +1,6 @@
 <?php
 
-namespace li3_dompdf\writer;
+namespace li3_dompdf\writers;
 
 class Pdfs extends \lithium\core\Adaptable {
 	/**
@@ -81,13 +81,13 @@ class Pdfs extends \lithium\core\Adaptable {
 			define('DEBUG_LAYOUT_INLINE', $config['debug'], true);
 			define('DEBUG_LAYOUT_PADDINGBOX', $config['debug'], true);
 			define('DOMPDF_LOG_OUTPUT_FILE', DOMPDF_FONT_DIR.'log.htm');
-			
+
 			$dompdf = new \DOMPDF();
 			$dompdf->set_paper($config['paper'], $config['orientation']);
-			
+
 			static::$_dompdf = $dompdf;
 		}
-		
+
 		return static::$_dompdf;
 	}
 }
