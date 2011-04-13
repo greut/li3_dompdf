@@ -3,7 +3,7 @@
 use \lithium\core\Libraries;
 
 if (!defined('DOMPDF_LIBRARY_PATH')) {
-	define('DOMPDF_LIBRARY_PATH', LITHIUM_LIBRARY_PATH . '/dompdf');
+	define('DOMPDF_LIBRARY_PATH', LITHIUM_LIBRARY_PATH . '/dompdf/dompdf');
 }
 
 define('DOMPDF_INC_DIR', DOMPDF_LIBRARY_PATH . '/include', true);
